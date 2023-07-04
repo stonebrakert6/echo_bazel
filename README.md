@@ -29,5 +29,5 @@ e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
 ##### Copy compile_commands.json to output_base. This remove spurious compilation errors
 5. ``cp compile_commands.json `bazel info output_base``
 
-##### Run clangd in 'check' mode. This should result in a crash.
+##### Run clangd in 'check' mode. This should cause clangd to crash with stacktrace
 6. ``clangd --log=verbose --check=external/com_google_tcmalloc/tcmalloc/tcmalloc.cc``
