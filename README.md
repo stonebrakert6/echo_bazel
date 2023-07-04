@@ -13,7 +13,7 @@ Bazel compilation database generation testing
 ## Steps to reproduce the problem
 
 ##### Clone this repsitory
-1. ``git clone https://github.com/stonebrakert6/echo_bazel``
+1. ``git clone https://github.com/stonebrakert6/echo_bazel && cd echo_bazel``
 
 ##### Setup clang toolchain for bazel
 2. ``./setup_clang.sh <PATH_TO_CLANG_LLVM_DIRECTORY>``
