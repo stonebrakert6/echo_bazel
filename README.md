@@ -12,22 +12,22 @@ Bazel compilation database generation testing
 
 ## Steps to reproduce the problem
 
-##### Clone this repsitory
-1. ``git clone https://github.com/stonebrakert6/echo_bazel && cd echo_bazel``
+##### 1. Clone this repsitory
+``git clone https://github.com/stonebrakert6/echo_bazel && cd echo_bazel``
 
-##### Setup clang toolchain for bazel. This would generate file clang.bazelrc
-2. ``./setup_clang.sh <PATH_TO_CLANG_LLVM_DIRECTORY>``
+##### 2. Setup clang toolchain for bazel. This would generate file clang.bazelrc
+``./setup_clang.sh <PATH_TO_CLANG_LLVM_DIRECTORY>``
 
 e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
 
-##### Build the project
-3. ``bazel build --verbose_failures --subcommands //main/...``
+##### 3. Build the project
+``bazel build --verbose_failures --subcommands //main/...``
 
-##### Generate compilation database
-4. ``bazel run @hedron_compile_commands//:refresh_all``
+##### 4. Generate compilation database
+``bazel run @hedron_compile_commands//:refresh_all``
 
-##### Copy compile_commands.json to output_base. This remove spurious compilation errors
-5. ``cp compile_commands.json `bazel info output_base``
+##### 5. Copy compile_commands.json to output_base. This remove spurious compilation errors
+``cp compile_commands.json `bazel info output_base``
 
-##### Run clangd in 'check' mode. This should cause clangd to crash with stacktrace
-6. ``clangd --log=verbose --check=external/com_google_tcmalloc/tcmalloc/tcmalloc.cc``
+##### 6. Run clangd in 'check' mode. This should cause clangd to crash with stacktrace
+``clangd --log=verbose --check=external/com_google_tcmalloc/tcmalloc/tcmalloc.cc``
