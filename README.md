@@ -27,7 +27,7 @@ e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
 ``./bazel-bin/main/a.out``
 
 ##### 4. Generate compilation database
-``bazel run @hedron_compile_commands//:refresh_all``
+``bazel run :refresh_compile_commands``
 
 ##### 5. Copy compile_commands.json to output_base. This remove spurious compilation errors
 ``cp compile_commands.json `bazel info output_base` ``
