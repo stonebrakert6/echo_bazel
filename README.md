@@ -12,18 +12,21 @@ Bazel compilation database generation testing
 
 ## Steps to reproduce the problem
 
+##### Clone this repsitory
+1. ``git clone https://github.com/stonebrakert6/echo_bazel``
+
 ##### Setup clang toolchain for bazel
-1. ``./setup_clang.sh <PATH_TO_CLANG_LLVM_DIRECTORY>``
+2. ``./setup_clang.sh <PATH_TO_CLANG_LLVM_DIRECTORY>``
 
 e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
 
 ##### Build the project
-2. ``bazel build --verbose_failures --subcommands //main/...``
+3. ``bazel build --verbose_failures --subcommands //main/...``
 
 ##### Generate compilation database
-3. ``bazel run @hedron_compile_commands//:refresh_all``
+4. ``bazel run @hedron_compile_commands//:refresh_all``
 
 ##### Copy compile_commands.json to output_base. This remove spurious compilation errors
-4. ``cp compile_commands.json `bazel info output_base``
+5. ``cp compile_commands.json `bazel info output_base``
 
-5. ``clangd --log=verbose --check=external/com_google_tcmalloc/tcmalloc/tcmalloc.cc``
+6. ``clangd --log=verbose --check=external/com_google_tcmalloc/tcmalloc/tcmalloc.cc``
