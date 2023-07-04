@@ -15,7 +15,7 @@ Bazel compilation database generation testing
 ##### Clone this repsitory
 1. ``git clone https://github.com/stonebrakert6/echo_bazel && cd echo_bazel``
 
-##### Setup clang toolchain for bazel
+##### Setup clang toolchain for bazel. This would generate file clang.bazelrc
 2. ``./setup_clang.sh <PATH_TO_CLANG_LLVM_DIRECTORY>``
 
 e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
