@@ -3,7 +3,7 @@ Bazel compilation database generation testing
 ## Pre-requisites
 
 1. Need a linux machine. Mine is Ubuntu 22.04
-2. clang compiler toolchain. I am using version clang-16.
+2. clang compiler toolchain. I am using version clang-16. Verified that this is an issue with clang-14 as well.
 3. bazel. You can install bazel using following
 
 - ``sudo wget -O /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-$([ $(uname -m) = "aarch64" ] && echo "arm64" || echo "amd64")``
