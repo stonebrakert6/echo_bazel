@@ -23,6 +23,9 @@ e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
 ##### 3. Build the project
 ``bazel build --verbose_failures --subcommands //main/...``
 
+##### Optional - Verify that we have an exe generated. Run it
+``./bazel-bin/main/a.out``
+
 ##### 4. Generate compilation database
 ``bazel run @hedron_compile_commands//:refresh_all``
 
