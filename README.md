@@ -6,9 +6,9 @@ Bazel compilation database generation testing
 2. clang compiler toolchain. I am using version clang-16.
 3. bazel. You can install bazel using following
 
-``sudo wget -O /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-$([ $(uname -m) = "aarch64" ] && echo "arm64" || echo "amd64")
+``sudo wget -O /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-$([ $(uname -m) = "aarch64" ] && echo "arm64" || echo "amd64")``
 
-sudo chmod +x /usr/local/bin/bazel``
+``sudo chmod +x /usr/local/bin/bazel``
 
 # Steps to reproduce the problem
 
