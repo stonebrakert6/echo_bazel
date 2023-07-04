@@ -27,7 +27,7 @@ e.g ./setup_clang.sh /home/stonebrakert6/build/llvm
 ``bazel run @hedron_compile_commands//:refresh_all``
 
 ##### 5. Copy compile_commands.json to output_base. This remove spurious compilation errors
-``cp compile_commands.json `bazel info output_base``
+``cp compile_commands.json `bazel info output_base` ``
 
 ##### 6. Run clangd in 'check' mode. This should cause clangd to crash with stacktrace
 ``clangd --log=verbose --check=external/com_google_tcmalloc/tcmalloc/tcmalloc.cc``
