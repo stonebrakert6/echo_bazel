@@ -18,9 +18,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "com_google_tcmalloc",
-    urls = ["https://github.com/google/tcmalloc/archive/daa14d5185ca97e2a93cfcee932593a620fff637.zip"],
-    strip_prefix = "tcmalloc-daa14d5185ca97e2a93cfcee932593a620fff637",
-    sha256 = "4c7504ea0a3df1fff755467aa40223149e101cc763e7b2dde3233a0e05aee91b",
+    urls = ["https://github.com/google/tcmalloc/archive/0e8cc551f2719ffd413cfd3947925dc59686f675.zip"],
+    strip_prefix = "tcmalloc-0e8cc551f2719ffd413cfd3947925dc59686f675",
+    # sha256 = "4c7504ea0a3df1fff755467aa40223149e101cc763e7b2dde3233a0e05aee91b",
 )
 
 # Load a recent version of skylib in case our dependencies have obsolete

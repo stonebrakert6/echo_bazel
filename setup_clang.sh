@@ -27,4 +27,5 @@ build:clang --repo_env='LLVM_CONFIG=${LLVM_PREFIX}/bin/llvm-config'
 build:clang --linkopt='-L$(llvm-config --libdir)'
 build:clang --linkopt='-Wl,-rpath,$(llvm-config --libdir)'
 build:clang --cxxopt='-std=c++17'
+build:clang --linkopt='-static'
 " >"${BAZELRC_FILE}"
