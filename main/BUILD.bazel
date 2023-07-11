@@ -1,0 +1,14 @@
+cc_binary(
+    name = "a.out",
+    srcs = ["main.cc"],
+    malloc = "@com_google_tcmalloc//tcmalloc",
+    # deps = ["//utils:utils", "@com_google_tcmalloc//tcmalloc"],
+    deps = [
+        "//utils",
+        "@com_github_google_boringssl//:crypto",
+        "@com_github_google_boringssl//:ssl",
+        "@com_github_liburing//:liburing",
+        "@com_google_absl//absl/container:flat_hash_map",
+        "@com_google_absl//absl/strings",
+    ],
+)
